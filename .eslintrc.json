@@ -1,0 +1,81 @@
+{
+  "extends": ["eslint:recommended", "plugin:react/recommended", "airbnb"],
+  "parser": "babel-eslint",
+  "plugins": ["react", "flowtype", "react-hooks"],
+  "parserOptions": {
+    "ecmaVersion": 8,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true,
+      "modules": true,
+      "import": true,
+      "arrowFunctions": true,
+      "blockBindings": true,
+      "defaultParams": true,
+      "destructuring": true,
+      "forOf": true,
+      "generators": true,
+      "objectLiteralComputedProperties": true,
+      "objectLiteralShorthandMethods": true,
+      "objectLiteralShorthandProperties": true,
+      "restParams": true,
+      "spread": true,
+      "templateStrings": true,
+      "classes": true,
+      "experimentalObjectRestSpread": true
+    }
+  },
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "globals": {
+    "React": false,
+    "process": false,
+    "I18n": false,
+    "ReactDOM": false
+  },
+  "rules": {
+    "semi": [1],
+    "no-unused-vars": [1],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "no-plusplus": "off",
+    "no-extend-native": "off",
+    "class-methods-use-this": "off",
+    "quotes": "off",
+    "comma-dangle": "off",
+    "quote-props": [2, "as-needed", { "numbers": true, "keywords": true, "unnecessary": false }],
+    "prefer-template": "off",
+    "one-var": "off",
+    "arrow-body-style": "off",
+    "spaced-comment": 1,
+    "max-len": [1, 120],
+    "max-lines": [1, { "max": 200 }],
+    "import/prefer-default-export": "off",
+    "object-curly-newline": "off",
+    "jsx-a11y/no-noninteractive-element-to-interactive-role": [
+      "error",
+      {
+        "li": ["button"],
+        "p": ["button"]
+      }
+    ],
+    "jsx-a11y/no-static-element-interactions": "off",
+    "jsx-a11y/img-has-alt": "off",
+    "no-alert": "off",
+    "react/sort-comp": "off",
+    "no-restricted-syntax": "off",
+    "react/require-default-props": "off",
+    "react/destructuring-assignment": "off",
+    "react/no-array-index-key": "off",
+    "react/prefer-stateless-function": "off",
+    "react/prop-types": [1],
+    "react/no-unused-prop-types": [1],
+    "react/jsx-props-no-spreading": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "no-irregular-whitespace": ["error", { "skipStrings": true, "skipTemplates": true }],
+    "react/no-find-dom-node": "off",
+    "arrow-parens": "off",
+    "no-unused-expressions": "off"
+  }
+}
