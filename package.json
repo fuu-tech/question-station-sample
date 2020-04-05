@@ -1,7 +1,7 @@
 {
   "name": "question-station-sample",
-  "version": "0.1.0",
-  "private": false,
+  "version": "0.0.0",
+  "private": true,
   "devDependencies": {
     "eslint": "6.8.0",
     "eslint-config-airbnb": "18.0.1",
