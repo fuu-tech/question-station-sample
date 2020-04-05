@@ -1,0 +1,142 @@
+.question-content-new-container {
+	border: 1px solid $border-line-color;
+}
+
+.question-content-new-title {
+	padding: 5px;
+}
+
+.question-content-new-box {
+	display: flex;
+	border-top: 1px solid $border-line-color;
+
+	.question-content-new-side-box:last-child {
+		border-right: none;
+	}
+}
+
+.question-content-new-side-box {
+	min-width: 50%;
+	box-sizing: border-box;
+	border-right: 1px solid $border-line-color;
+	padding: 8px;
+
+	.MuiButtonGroup-root {
+		display: block;
+	}
+
+	.MuiButton-label {
+		width: max-content;
+	}
+}
+
+.question-content-new-field {
+	padding: 5px;
+	border-bottom: 1px solid $border-line-color;
+}
+
+.ballot-box {
+	min-width: 280px;
+
+	.ballot-title {
+		font-weight: bold;
+	}
+
+	.ballot-date {
+		font-size: 14px;
+		color: rgb(139, 139, 139);
+	}
+
+	.ballot-choice-container {
+		display: flex;
+		align-items: center;
+	}
+
+	.ballot-my-choice-button-container {
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	.vote-count-text {
+		word-break: keep-all;
+	}
+}
+
+.question-answer-controller-container {
+	margin-top: 64px;
+}
+
+.question-answer-move-buttons-container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.question-answer-buttons-container {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	word-break: break-all;
+
+	.MuiButton-root {
+		text-transform: none;
+	}
+}
+
+.question-answer-container {
+	.MuiBottomNavigation-root {
+		height: auto;
+		justify-content: left;
+		overflow-x: auto;
+	}
+
+	.MuiBottomNavigationAction-root {
+		min-height: 2.7rem;
+	}
+}
+
+.question-contents-fields-buttons {
+	display: flex;
+	justify-content: space-between;
+
+	button {
+		height: 100%;
+	}
+
+	.question-contents-fields-culumn-buttons {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+.try-button-container {
+	margin: 24px 0;
+	display: flex;
+	justify-content: center;
+
+	button {
+		font-size: 1.25rem;
+
+		.original-svg {
+			font-size: 36px;
+			fill: black;
+
+			line, path, polyline {
+				stroke: black;
+			}
+		}
+	}
+}
+
+.question-contents-error-fields {
+	border-top: 1px solid $border-line-color;
+}
+
+.question-info-container {
+	float: right;
+
+	span {
+		font-size: 14px;
+		color: rgb(139, 139, 139);
+		margin: 4px;
+	}
+}

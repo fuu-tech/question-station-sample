@@ -1,0 +1,59 @@
+.MuiList-root {
+  padding: 0;
+  width: 100%;
+
+  .MuiListItem-root:first-child {
+    border-top: 1px solid $border-line-color;
+  }
+
+  .MuiListItem-root {
+    display: block;
+    padding: 0;
+    border-bottom: 1px solid $border-line-color;
+
+    >a {
+      padding: 8px 16px;
+    }
+  }
+}
+
+.MuiTabs-root {
+  border-top: 1px solid $border-line-color;
+  border-bottom: 1px solid $border-line-color;
+
+  .MuiTabs-scrollButtons {
+    width: 24px;
+  }
+}
+
+.MuiCircularProgress-root {
+  z-index: 0;
+}
+
+.MuiTabs-scroller {
+  @media (max-width: $mobile-width-threshold) {
+    overflow-x: scroll !important;
+  }
+}
+
+
+.MuiBottomNavigationAction-wrapper {
+  .MuiBottomNavigationAction-label {
+    font-size: 0.875rem;
+  }
+  .Mui-selected {
+    font-size: 1.375rem !important;
+  }
+}
+
+.MuiFormControlLabel-root {
+  width: 100%;
+}
+
+.MuiTooltip-popper {
+  white-space: pre-wrap;
+
+  .MuiTooltip-tooltip {
+    font-size: 0.75rem;
+  }
+}

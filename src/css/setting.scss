@@ -1,0 +1,29 @@
+.setting-body {
+	min-height: inherit;
+}
+
+.setting-container {
+	display: flex;
+	min-height: inherit;
+
+	.setting-form-container {
+		width: 72%;
+	}
+}
+
+.setting-list-container {
+	width: 28%;
+	border-right: 1px solid $border-line-color;
+	box-sizing: border-box;
+}
+
+.setting-form-container {
+	width: 100%;
+}
+
+.setting-danger-zone {
+	margin: 16px;
+	padding: 16px;
+	border: 1px solid crimson;
+	border-radius: 8px;
+}

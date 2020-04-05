@@ -1,0 +1,80 @@
+.content-container {
+	min-height: inherit;
+	height: calc(100vh - 46px);
+	overflow: hidden;
+
+	.content-member-container {
+		align-items: center;
+    display: flex;
+		padding: 8px;
+		border-bottom: 1px solid $border-line-color;
+		overflow: auto;
+	}
+
+}
+
+.content-header {
+	padding: 8px;
+	border-bottom: 1px solid $border-line-color;
+
+	> div {
+		margin: 8px 0;
+	}
+
+	> div:first-child {
+		margin-top: 0;
+	}
+
+	> div:last-child {
+		margin-bottom: 0;
+	}
+
+	.content-title-container {
+		display: flex;
+		align-items: center;
+		width: 100%;
+
+		.content-title {
+			font-size: 20px;
+			font-weight: bold;
+			word-break: break-word;
+		}
+
+	}
+
+	.content-header-bottom-container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		.content-buttons-container {
+			display: flex;
+		}
+	}
+
+	button {
+		height: 100%;
+	}
+}
+
+.content-related-list {
+	margin-top: 24px;
+}
+
+.content-type-container {
+	.MuiTabs-root {
+		border: 1px solid $border-line-color;
+	}
+}
+
+.content-edit-to-content-button-container {
+	display: flex;
+	justify-content: flex-end;
+	margin: 4px;
+}
+
+.answer-history-card-bottom-row {
+	display: flex;
+	justify-content: space-between;
+	margin: 4px 0;
+}

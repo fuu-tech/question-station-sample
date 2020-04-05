@@ -1,0 +1,20 @@
+.help-body {
+}
+
+.help-container {
+	display: flex;
+}
+
+.help-list-container {
+	min-width: 28%;
+	border-right: 1px solid $border-line-color;
+	box-sizing: border-box;
+
+	.MuiTabs-root {
+		border-bottom: none;
+	}
+}
+
+.help-content-container {
+	padding: 8px;
+}

@@ -1,0 +1,510 @@
+html {
+  font-family: Arial, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, メイリオ, Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif !important;
+  font-size: 14px;
+  @media (min-width: $mobile-width-threshold) {
+    font-size: 16px;
+  }
+}
+
+body {
+  background-color: $ground;
+  margin: 0;
+}
+
+form {
+  padding: 16px;
+	box-sizing: border-box;
+}
+
+.index-body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
+.logo-title {
+  max-width: 80vw;
+}
+
+.logo-circle {
+  background-color: white;
+  text-align: center;
+  display: inline-block;
+  border-radius: 25px;
+  width: 45px;
+  height: 45px;
+  min-width: max-content;
+}
+
+.initial-loader-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 45vh;
+
+  animation-name: my-fade-in;
+  animation-duration: 1s;
+}
+
+@keyframes my-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.none-decoration {
+  text-decoration: none;
+
+  > button {
+    text-transform: none;
+  }
+}
+
+.initial-loader-title {
+  font-size: 1.5em;
+}
+
+.label {
+  padding: 4px;
+  font-size: 18px;
+}
+
+.center-label-container {
+  display: flex;
+  justify-content: center;
+}
+
+.error-message {
+  color: $error-color;
+  font-size: 12px;
+}
+
+.card-content {
+  width: 100%;
+}
+
+.card-top-row {
+  margin-bottom: 8px;
+}
+
+.card-bottom-row {
+  text-align: end;
+}
+
+.card-icon-box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+  margin-left: 0;
+  margin-right: 8px;
+}
+
+.list-loader-container {
+  display: flex;
+  justify-content: center;
+}
+
+.fixed-loader-container {
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  z-index: 10;
+
+  @media (max-width: $mobile-width-threshold) {
+    width: 100%;
+  }
+}
+
+.header-container {
+  position: sticky;
+  top: 0px;
+  background-color: $theme-color1;
+  z-index: 1;
+
+  @media (max-width: $mobile-width-threshold) {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: unset;
+  }
+
+  .header-content-container {
+    display: flex;
+    justify-content: space-between;
+
+    .header-buttons-container {
+      display: flex;
+      height: 100%;
+      overflow-x: hidden;
+
+      .header-nav-buttons-container {
+        display: flex;
+        height: 100%;
+        overflow: auto;
+      }
+    }
+  }
+}
+
+.section-title {
+  font-size: 1.2rem;
+	padding: 4px;
+}
+
+.content-body {
+  min-height: 50vh;
+}
+
+.page-explanation {
+  border-bottom: 1px solid $border-line-color;
+
+  .page-title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  p {
+    white-space: pre;
+  }
+}
+
+.common-list {
+  display: block;
+  > li {
+    list-style: none;
+  }
+}
+
+.clicked-button {
+  background-color: #b1b1b1;
+}
+
+.icon-button {
+  cursor: pointer;
+  color: #ffffff;
+  padding: 0 2px;
+  transition: color 0.15s, stroke 0.15s;
+
+  svg {
+    font-size: 40px;
+  }
+
+  &:hover {
+    color: #4b89d1;
+
+    .original-svg {
+      line, path, polyline {
+        stroke: #4b89d1;
+      }
+    }
+  }
+
+  .original-svg {
+    line, path, polyline {
+      stroke: #ffffff;
+    }
+  }
+}
+
+.link-list-item {
+  transition: background-color 0.15s;
+
+  &:hover {
+    background-color: #f1f1f1;
+  }
+}
+
+.tab {
+  transition: background-color 0.15s;
+
+  &:hover {
+    background-color: #f1f1f1;
+  }
+}
+
+.field-block {
+  margin-bottom: 12px;
+}
+
+.choice-field-container {
+  display: flex;
+}
+
+.input-with-clear-button-wrapper {
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+
+.row-buttons-container {
+  display: flex;
+  height: 100%;
+
+  button {
+    height: 100%;
+  }
+}
+
+.modal-close-button {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+
+.modal-button-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 16px;
+}
+
+.pagination-button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.note {
+  white-space: pre-line;
+  font-size: 0.8rem;
+  color: crimson;
+}
+
+.horizontal-card-container {
+  white-space: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+
+  > ul {
+    display: flex;
+    padding: 0 16px;
+
+    > * {
+      margin: 0 12px;
+      padding: 4px;
+      white-space: normal;
+      word-wrap: break-word;
+      border: 1px solid $border-line-color;
+    }
+
+    > span:first-child {
+      margin: 0 12px 0 0;
+    }
+
+  }
+}
+
+.link-user-icon-circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 15px;
+  object-fit: cover
+}
+
+.tag-input-clear-button {
+  position: absolute;
+  right: 0;
+  margin-top: 6px;
+}
+
+.markdown-padding-container {
+  padding: 8px 16px;
+}
+
+.comment-markdown-padding {
+  padding: 8px;
+}
+
+.markdown-preview {
+  all: initial;
+  width: inherit;
+  font-family: メイリオ, Meiryo, "游ゴシック Medium", YuGothic, YuGothicM, "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", sans-serif !important;
+  font-size: 14px;
+  @media (min-width: $mobile-width-threshold) {
+    font-size: 16px;
+  }
+  word-wrap: break-word;
+  word-break: break-word;
+
+  > p {
+    overflow-wrap: break-word;
+  }
+
+  > {
+    margin: 4px 0;
+  }
+
+  li {
+    margin: 2px 0;
+  }
+
+  pre {
+    code {
+      overflow: auto;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+  }
+
+  .katex {
+    >span.katex-html {
+      >span.base {
+        white-space: pre-line;
+        display: inline;
+      }
+    }
+  }
+}
+.tags-container-wrapper {
+  overflow-x: hidden;
+
+  .tags-container {
+    display: flex;
+  }
+}
+
+.submit-button-block {
+  display: flex;
+  justify-content: flex-end;
+
+  button {
+    margin: 16px 24px 24px 16px;
+  }
+}
+
+.move-to-icon {
+  position: absolute;
+  color: black;
+
+  margin-left: 2px;
+  top: 0;
+  animation: move-to-icon-anim-top 400ms ease-out, move-to-icon-anim-margin 400ms ease-in;
+
+  svg {
+    font-size: 80px;
+    width: 10px;
+    animation: move-to-icon-anim-svg 400ms ease-in;
+  }
+}
+
+@keyframes move-to-icon-anim-top {
+  0% { top: 30px; }
+  100% { top: -15px; }
+}
+
+@keyframes move-to-icon-anim-margin {
+  0% { margin-left: -18px; }
+  100% { margin-left: 14px; }
+}
+
+@keyframes move-to-icon-anim-svg {
+  0% { width: 80px; }
+  100% { width: 10px; }
+}
+
+.markdown-preview-in-button {
+  cursor: pointer;
+  font-size: 1.25rem;
+}
+
+.input-with-mark-down-preview-box-wrapper {
+  margin-top: 8px;
+}
+.input-with-mark-down-preview-box {
+  width: 100%;
+  min-height: 101px;
+  padding: 8px;
+  border: 1px solid $border-line-color;
+  border-radius: 4px;
+  box-sizing: border-box;
+  display: flex;
+}
+
+.input-box-top-button {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  top: 8px;
+}
+
+.content-card, .user-card, .workbook-card {
+  display: flex;
+}
+
+.correct-answer-rate-bar-container {
+  display: flex;
+
+  div {
+    height: 4px;
+  }
+}
+
+.news-container {
+  .link-list-item {
+    >.link {
+      padding-left: 0 !important;
+    }
+  }
+
+  .news-card {
+    display: flex;
+  }
+
+  .MuiListItemIcon-root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .MuiListItemText-primary {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: block;
+  }
+}
+
+.right-note-block {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 14px;
+  color: rgb(139, 139, 139);
+  margin: 4px;
+}
+
+.term-panels-container {
+  display: flex;
+  justify-content: center;
+  @media (min-width: $mobile-width-threshold) {
+    margin: 40px;
+  }
+
+  > div {
+    font-size: 100%;
+    width: 100vw;
+    @media (min-width: $mobile-width-threshold) {
+      width: 80vw;
+    }
+  }
+}
+
+.login-button-contaner {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 56px auto;
+  width: max-content;
+
+  > a {
+    display: grid;
+    margin-bottom: 8px;
+  }
+}

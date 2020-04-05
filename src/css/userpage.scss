@@ -1,0 +1,125 @@
+.userpage-circle {
+  min-width: 20vw;
+  height: 20vw;
+  border-radius: 10vw;
+  border: 2px solid $ground;
+  -o-object-fit: cover;
+  object-fit: cover;
+  max-width: 150px;
+  max-height: 150px;
+  margin: 0 8px 8px 0;
+
+  @media (min-width: $mobile-width-threshold) {
+    min-width: unset;
+    margin: 0;
+  }
+}
+
+
+.userpage-box-including-icon {
+  margin: 25px 20px;
+}
+
+
+.userpage-profile-area {
+  width: 100%;
+  margin: 24px 0px;
+  background: $ground;
+  border: 2px solid $border-line-color;
+  border-radius: 4px;
+  overflow-wrap: break-word;
+  padding: 8px;
+  box-sizing: border-box;
+  word-break: break-word;
+
+  @media (min-width: $mobile-width-threshold) {
+    padding: 20px;
+  }
+
+  > * {
+    min-width: 0;
+  }
+
+  button {
+    text-transform: initial;
+  }
+
+  .userpage-profile-head-container {
+    display: flex;
+
+    .MuiIconButton-root {
+      float: right;
+    }
+  }
+}
+
+
+.userpage-profile-text-container {
+  margin: 10px 30px 35px 30px;
+  background: $ground;
+  border: 2px solid $border-line-color;
+  border-radius: 4px;
+
+  .MuiTabs-root {
+    border-top: none;
+  }
+
+  .userpage-profile-text-box {
+    padding: 28px 20px;
+  }
+}
+
+
+.userpage-column {
+  display: flex;
+  margin: 0 16px;
+}
+
+.userpage-user-name {
+  font-size: 21px;
+}
+
+
+.userpage-user-id {
+  font-size: 14px;
+  color: $user-id-color;
+}
+
+
+.userpage-user-profile-item {
+  font-size: 14px;
+  margin-right: 4px;
+}
+
+
+.userpage-user-tag {
+  font-size: 14px;
+}
+
+
+.userpage-profile-part {
+  margin: 8px 0;
+}
+
+.userpage-statistics {
+  display: flex;
+
+  > * {
+    flex-basis: 50%;
+    border-right: 1px solid $border-line-color;
+  }
+
+  > *:last-child {
+    border-right: none;
+  }
+
+  .userpage-statistics-part-title {
+    padding: 8px;
+    font-size: 1.1rem;
+    border-bottom: 1px solid $border-line-color;
+  }
+
+  .userpage-statistics-side-box {
+    padding: 8px;
+  }
+}
