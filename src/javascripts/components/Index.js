@@ -2,9 +2,6 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { Router } from 'react-router-dom';
 import { I18nextProvider } from 'react-i18next';
-import jaLocale from "date-fns/locale/ja";
-import { MuiPickersUtilsProvider } from '@material-ui/pickers';
-import DateFnsUtils from '@date-io/date-fns';
 import Alert from 'react-s-alert';
 import 'react-s-alert/dist/s-alert-default.css';
 import 'react-s-alert/dist/s-alert-css-effects/scale.css';
@@ -14,7 +11,6 @@ import { store, history } from '../store';
 import { initCurrentUser } from '../actions/users';
 import { setIsMobile } from '../actions/options';
 import { mobileWidthThreshold } from '../constants/thresholds';
-import ContextProvider from './ContextProvider';
 import RouteIndex from '../containers/RouteIndex';
 import '../../css/index.scss';
 import '../prototypes/index';
@@ -50,14 +46,10 @@ export default class Index extends React.Component {
     return (
       <Provider store={store}>
         <I18nextProvider i18n={i18n}>
-          <MuiPickersUtilsProvider utils={DateFnsUtils} locale={jaLocale}>
-            <ContextProvider>
-              <Router history={history}>
-                <RouteIndex />
-                <Alert stack={{ limit: 3 }} />
-              </Router>
-            </ContextProvider>
-          </MuiPickersUtilsProvider>
+          <Router history={history}>
+            <RouteIndex />
+            <Alert stack={{ limit: 3 }} />
+          </Router>
         </I18nextProvider>
       </Provider>
     );
